@@ -1,0 +1,223 @@
+{
+  "watch_dir": "C:/Users/windo/Downloads",
+  "interval_sec": 5,
+  "min_age_sec": 10,
+  "ignore_ext": [
+    ".crdownload",
+    ".part",
+    ".tmp"
+  ],
+  "ignore_names": [
+    "desktop.ini",
+    "Thumbs.db"
+  ],
+  "collect_unmanaged_dirs": true,
+  "unmanaged_dir_target": "%USERPROFILE%/Downloads/_Folders/",
+  "managed_marker": ".dorg_managed",
+  "unmanaged_dirs_exclude": [
+    "ярлыки",
+    "Archives",
+    "Installers",
+    "Shortcuts",
+    "Fonts",
+    "3D",
+    "Design",
+    "Code",
+    "Torrents",
+    "Misc"
+  ],
+  "rules": [
+    {
+      "name": "Images",
+      "match_ext": [
+        "jpg",
+        "jpeg",
+        "png",
+        "webp",
+        "gif",
+        "bmp",
+        "tiff",
+        "avif",
+        "heic"
+      ],
+      "to_dir": "%USERPROFILE%/Pictures/",
+      "rename": "{stem}_{date}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Videos",
+      "match_mime": [
+        "video/"
+      ],
+      "match_ext": [
+        "mp4",
+        "mkv",
+        "avi",
+        "mov",
+        "webm"
+      ],
+      "to_dir": "%USERPROFILE%/Videos/",
+      "rename": "{stem}_{date}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Audio",
+      "match_mime": [
+        "audio/"
+      ],
+      "match_ext": [
+        "mp3",
+        "wav",
+        "flac",
+        "ogg",
+        "m4a"
+      ],
+      "to_dir": "%USERPROFILE%/Music/",
+      "rename": "{stem}_{date}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Docs",
+      "match_ext": [
+        "pdf",
+        "doc",
+        "docx",
+        "xls",
+        "xlsx",
+        "ppt",
+        "pptx",
+        "rtf",
+        "txt",
+        "csv"
+      ],
+      "to_dir": "%USERPROFILE%/Documents/",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Archives",
+      "match_ext": [
+        "zip",
+        "rar",
+        "7z",
+        "tar",
+        "gz",
+        "bz2",
+        "xz"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/Archives/",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Installers",
+      "match_ext": [
+        "exe",
+        "msi",
+        "msp",
+        "cab",
+        "iso",
+        "img",
+        "bin",
+        "dmg"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/Installers/",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Shortcuts & Links",
+      "match_ext": [
+        "lnk",
+        "url",
+        "webloc"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/Shortcuts",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Fonts",
+      "match_ext": [
+        "ttf",
+        "otf",
+        "woff",
+        "woff2"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/Fonts",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "3D & CAD",
+      "match_ext": [
+        "blend",
+        "fbx",
+        "obj",
+        "stl",
+        "step",
+        "stp",
+        "iges",
+        "igs"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/3D",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Adobe/Design",
+      "match_ext": [
+        "psd",
+        "ai",
+        "eps",
+        "indd",
+        "xd",
+        "fig"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/Design/",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Code",
+      "match_ext": [
+        "py",
+        "js",
+        "ts",
+        "jsx",
+        "tsx",
+        "html",
+        "css",
+        "json",
+        "xml",
+        "yml",
+        "yaml",
+        "ini",
+        "bat",
+        "cmd",
+        "ps1",
+        "sh",
+        "reg"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/Code/",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Torrents",
+      "match_ext": [
+        "torrent"
+      ],
+      "to_dir": "%USERPROFILE%/Downloads/Torrents/",
+      "rename": "{stem}",
+      "ensure_unique": true
+    },
+    {
+      "name": "Other (catch-all)",
+      "match_all": true,
+      "to_dir": "%USERPROFILE%/Downloads/Misc/",
+      "rename": "{stem}",
+      "ensure_unique": true
+    }
+  ]
+}
